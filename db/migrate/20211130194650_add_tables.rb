@@ -3,7 +3,7 @@ class AddTables < ActiveRecord::Migration[6.1]
     create_table :injuries do |t|
       t.string :body_part
       t.date   :injury_date
-      t.bool   :broken
+      t.boolean   :broken
       t.integer :severity
       t.date    :recovery_date
       t.references :races
