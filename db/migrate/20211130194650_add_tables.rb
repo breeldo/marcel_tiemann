@@ -6,7 +6,7 @@ class AddTables < ActiveRecord::Migration[6.1]
       t.boolean   :broken
       t.integer :severity
       t.date    :recovery_date
-      t.references :races
+      t.references :race
     end
 
     create_table :races do |t|

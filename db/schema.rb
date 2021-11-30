@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2021_11_30_194650) do
     t.boolean "broken"
     t.integer "severity"
     t.date "recovery_date"
-    t.integer "races_id"
-    t.index ["races_id"], name: "index_injuries_on_races_id"
+    t.integer "race_id"
+    t.index ["race_id"], name: "index_injuries_on_race_id"
   end
 
   create_table "races", force: :cascade do |t|
