@@ -1,0 +1,23 @@
+<%= form_with(model: injury) do |form| %>
+  <% if injury.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(injury.errors.count, "error") %> prohibited this injury from being saved:</h2>
+
+      <ul>
+        <% injury.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :race_id %>
+  <div class="field">
+    <%= form.label :body_part %>
+    <%= form.text_field :body_part %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
